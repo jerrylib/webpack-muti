@@ -27,7 +27,7 @@ module.exports = {
         new HtmlwebpackPlugin({
             filename: 'index.html',
             template: path.join(APP_PATH, 'index.html'),
-            inject: 'head'
+            inject: 'body'
         }),
         new CleanPlugin([BUILD_PATH], {
             root: ROOT_PATH,
