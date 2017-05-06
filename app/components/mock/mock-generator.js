@@ -11,8 +11,7 @@ module.exports = {
             return {
                 name:'test',
                 age:123
-            }
+            };
         }
-
     }]
-}
+};
