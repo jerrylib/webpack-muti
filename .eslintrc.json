@@ -1,7 +1,13 @@
 {
     "env": {
+        "browser": true,
         "es6": true,
         "node": true
+    },
+    "globals": {
+        "arguments": true,
+        "window": true,
+        "Promise": true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
@@ -11,29 +17,24 @@
         },
         "sourceType": "module"
     },
-    "plugins": [
-        "react"
-    ],
+    "plugins": [],
     "rules": {
-        "indent": [
-            "error",
-            "tab"
-        ],
-        "linebreak-style": [
-            "error",
-            "windows"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ],
-        "no-alert": [
-            "error",
-            "always"
-        ]//禁止使用alert confirm prompt
+        //warm
+        "quotes": [1, "single"],
+        "no-mixed-spaces-and-tabs": [1, false], //禁止混用tab和空格
+        "no-unused-vars": [1, {
+            "vars": "all",
+            "args": "after-used"
+        }], //不能有声明后未被使用的变量或参数
+        "no-extra-parens": 1, //禁止非必要的括号
+        "no-trailing-spaces": 1,//一行结束后面不要有空格
+        "no-multiple-empty-lines": [1, {
+            "max": 1
+        }], //空行最多不能超过1行
+        //error
+        "semi": ["error", "always"],
+        "linebreak-style": ["error", "windows"],
+        "indent": [2, 4],
+        "eqeqeq": 2 //必须使用全等
     }
 }
