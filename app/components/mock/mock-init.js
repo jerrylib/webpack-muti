@@ -1,10 +1,22 @@
-import generator from './mock-generator';
+
+/**
+ * 
+ */
 import Mock from 'mockjs';
-console.log(generator);
-if (generator.enable) {
-    [].slice.call(generator.mock).forEach(function (mock) {
+import generator from './mock-generator';
+import libin from './mock-libin';
+
+let configArray = [generator,libin];
+console.log(123);
+//批量加载mock配置文件
+[].slice.call(configArray).forEach(function (configData) {
+    if (configData.enable) {
+        loadMockConfig(configData.mock)
+    }
+});
+function loadMockConfig(mocks){
+    [].slice.call(mocks).forEach(function (mock) {
         if (mock.enable) {
-            console.log(mock);
             Mock.mock(mock.url, mock.method, mock.template);
         }
     });
@@ -18,11 +30,12 @@ obj.onreadystatechange = function () {
     }
 };
 obj.send(null);
-obj.open('GET', '/v0.2/tes', true);
-obj.onreadystatechange = function () {
-    if (obj.readyState == 4 && obj.status == 200 || obj.status == 304) { // readyState==4说明请求已完成
+var obj1 = new XMLHttpRequest();
+obj1.open('GET', '/v0.2/demo', true);
+obj1.onreadystatechange = function () {
+    if (obj1.readyState == 4 && obj1.status == 200 || obj1.status == 304) { // readyState==4说明请求已完成
         //fn.call(this, obj.responseText); //从服务器获得数据
-        console.log(obj.responseText);
+        console.log(obj1.responseText);
     }
 };
-obj.send(null);
+obj1.send(null);

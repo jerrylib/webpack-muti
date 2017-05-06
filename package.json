@@ -18,6 +18,8 @@
   },
   "devDependencies": {
     "bootstrap.native": "^2.0.10",
+    "eslint": "^3.19.0",
+    "eslint-plugin-react": "^7.0.0",
     "html-webpack-plugin": "^2.28.0",
     "webpack": "^2.5.0",
     "webpack-dev-middleware": "^1.10.2",
