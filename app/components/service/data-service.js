@@ -13,7 +13,7 @@ function addValue(key, value) {
 function getValue(key) {
     return data[key];
 }
-export default {
+module.exports = {
     addValue: addValue,
     getValue: getValue
 };

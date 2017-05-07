@@ -51,6 +51,12 @@ var config = {
         {
             test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)\??.*$/,
             loader: 'url-loader?limit=8192&name=images/[hash:8].[name].[ext]'
+        },{
+            test: /\.js$/, //是一个正则，代表js或者jsx后缀的文件要使用下面的loader
+            loader: 'babel',
+            query: {
+                presets: ['es2015']
+            }
         }]
     }
 };

@@ -9,6 +9,9 @@
     "css-loader": "^0.28.1",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.1.1",
+    "karma-requirejs": "^1.1.0",
     "lodash": "^4.17.4",
     "mockjs": "^1.0.1-beta3",
     "style-loader": "^0.17.0",
@@ -17,19 +20,25 @@
     "webpack-merge": "^4.1.0"
   },
   "devDependencies": {
+    "babel-loader": "^7.0.0",
     "bootstrap.native": "^2.0.10",
     "eslint": "^3.19.0",
     "eslint-plugin-react": "^7.0.0",
     "html-webpack-plugin": "^2.28.0",
+    "jasmine-core": "^2.6.1",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.1.0",
+    "requirejs": "^2.3.3",
     "webpack": "^2.5.0",
     "webpack-dev-middleware": "^1.10.2",
     "webpack-dev-server": "^2.4.5"
   },
   "scripts": {
     "dev": "webpack-dev-server --hot --inline",
-    "build-dev": "webpack",
     "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "karma start karma.conf.js",
+    "dd": "karma start --single-run --no-auto-watch karma.conf.js",
+    "build-dev": "webpack"
   },
   "author": "佳期",
   "license": "ISC"
