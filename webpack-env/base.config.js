@@ -39,6 +39,11 @@ var config = {
             names: ['vendor']
         }),
         new ExtractTextPlugin('main.[hash:8].css'),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            },
+        })
     ],
     module: {
         loaders: [{
@@ -53,7 +58,7 @@ var config = {
             loader: 'url-loader?limit=8192&name=images/[hash:8].[name].[ext]'
         },{
             test: /\.js$/, //是一个正则，代表js或者jsx后缀的文件要使用下面的loader
-            loader: 'babel',
+            loader: 'babel-loader',
             query: {
                 presets: ['es2015']
             }
