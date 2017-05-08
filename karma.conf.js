@@ -10,27 +10,16 @@ module.exports = function (config) {
 
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-        frameworks: ['jasmine', 'requirejs'],
+        frameworks: ['jasmine'],
 
 
         // list of files / patterns to load in the browser
-        files: [
-
-            {
-                pattern: 'test/**/*.spec.js',
-                watched: true,
-                included: false,
-                served: true
-            },
-            {
-                pattern: 'app/**/*.js',
-                watched: true,
-                included: false,
-                served: true
-            },
-            //requirejs的入口
-            'test/test-main.js'
-        ],
+        files: [{
+            pattern: 'test/**/*.spec.js',
+            watched: true,
+            included: true,
+            served: true
+        }],
 
 
         // list of files to exclude
@@ -40,7 +29,7 @@ module.exports = function (config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            '**/app/*.js': 'coverage'
+            'test/**/*.spec.js': ['webpack']
         },
 
 
@@ -84,5 +73,18 @@ module.exports = function (config) {
             type: 'html',
             dir: 'coverage/'
         },
+        webpack: {
+            module: {
+                loaders: [{
+                    test: /\.js$/,
+                    loader: 'babel-loader',
+                    exclude: /node_modules/,
+                    query: {
+                        presets: ['es2015'],
+                        plugins: ['istanbul']
+                    }
+                }]
+            }
+        }
     });
 };
