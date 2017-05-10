@@ -40,9 +40,7 @@
   "scripts": {
     "dev": "webpack-dev-server --hot --inline",
     "build": "webpack",
-    "test": "karma start karma.conf.js",
-    "dd": "karma start --single-run --no-auto-watch karma.conf.js",
-    "build-dev": "webpack"
+    "test": "karma start karma.conf.js"
   },
   "author": "佳期",
   "license": "ISC",
@@ -50,5 +48,9 @@
     "presets": [
       "es2015"
     ]
+  },
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/jerrylib/webpack-muti.git"
   }
 }
