@@ -11,6 +11,7 @@
         "Promise": true
     },
     "extends": "eslint:recommended",
+    "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
             "experimentalObjectRestSpread": true,
@@ -20,7 +21,6 @@
     },
     "plugins": [],
     "rules": {
-        //warm
         "quotes": [1, "single"],
         "no-mixed-spaces-and-tabs": [1, false], //禁止混用tab和空格
         "no-unused-vars": [1, {
@@ -36,6 +36,7 @@
         "semi": ["error", "always"],
         "linebreak-style": ["error", "windows"],
         "indent": [2, 4],
-        "eqeqeq": 2 //必须使用全等
+        "eqeqeq": 2, //必须使用全等
+        "no-dynamic-import": ["off"]
     }
 }
