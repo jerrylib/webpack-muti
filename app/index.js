@@ -8,7 +8,7 @@ import dataService from 'dataService';
 dataService.addValue('test',121113);
 console.log(dataService.getValue('test'));
 
-// 异步 chunk 设置
+// chunk 语法支持
 import('./components/service/asyn-service').then(function ({ isEmptyString }) {
     console.log(isEmptyString('str'), isEmptyString(''));
 });
