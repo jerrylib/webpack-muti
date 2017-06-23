@@ -15,5 +15,3 @@ module.exports =  {
     addValue: addValue,
     getValue: getValue
 };
-
-
