@@ -14,8 +14,7 @@ var aliasPath = require(path.resolve(ROOT_PATH, 'app/alias.config.js'));
 var config = {
     //项目的文件夹 可以直接用文件夹名称 默认会找index.js 也可以确定是哪个文件名字
     entry: {
-        app: APP_PATH,
-        vendor: ['lodash']
+        app: APP_PATH
     },
     //输出的文件名 合并以后的js会命名为bundle.js
     output: {

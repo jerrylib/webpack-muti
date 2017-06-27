@@ -6,6 +6,6 @@
  */
 
 var aliasConfig = {
-    'dataService': '/components/service/data-service.js'
+    'components': '/components'
 };
 module.exports = aliasConfig;
