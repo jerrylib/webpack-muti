@@ -6,6 +6,7 @@
  */
 
 var aliasConfig = {
-    'components': '/components'
+    '~': '/components',
+    'mock-init':'/components/mock/mock-init.js'
 };
 module.exports = aliasConfig;

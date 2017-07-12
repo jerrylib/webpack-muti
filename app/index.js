@@ -5,9 +5,11 @@
  * @description 主入口模块
  */
 
-import React from 'react'
-import { render } from 'react-dom'
+import React from 'react';
+import { render } from 'react-dom';
+import 'mock-init';
 
+import './theme/css/style.css';
 // 引入React-Router模块
 import { Router, Route, Link, hashHistory, IndexRoute, Redirect, IndexLink} from 'react-router'
 
@@ -58,7 +60,7 @@ class Sider extends React.Component {
         return (
             <div>
                 <div id="leftMenu"> 
-                    <img src='src/assets/images/logo.png' width="50" id="logo"/>
+                    <img src='/app/theme/images/logo.png' width="50" id="logo"/>
                     <Menu theme="dark"
                         onClick={this.handleClick}
                         style={{ width: 185 }}
