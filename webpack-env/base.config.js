@@ -58,12 +58,10 @@ var config = {
         },{
             test: /\.js$/, //是一个正则，代表js或者jsx后缀的文件要使用下面的loader
             exclude: /(node_modules)/,
-            use:{
-                loader: 'babel-loader',
-                options: {
-                    presets: ['es2015','stage-0','react'],
-                    plugins: ['transform-runtime', ['antd',  { 'style': 'css' }]]
-                }
+            loader: 'babel-loader',
+            options: {
+                presets: ['es2015','stage-0','react'],
+                plugins: ['transform-runtime', ['antd',  { 'style': 'css' }]]
             }
         }]
     }

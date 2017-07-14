@@ -1,3 +1,4 @@
+process.noDeprecation = true;
 //process.env.npm_lifecycle_event为dev或build，用于判断是否是本地启动
 const isProd = process.env.npm_lifecycle_event === 'build';
 var merge = require('webpack-merge');

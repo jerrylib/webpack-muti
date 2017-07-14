@@ -1,5 +1,6 @@
-import React from 'react'
+import React from 'react';
 import { Calendar } from 'antd';
+import moment from 'moment';
 
 export default class myCalendar extends React.Component {
     dateCellRender = (value) => {
@@ -12,7 +13,7 @@ export default class myCalendar extends React.Component {
 
     render() {
         return (
-            <Calendar defaultValue={new Date('2010-10-10')}
+            <Calendar defaultValue={moment()}
                 dateCellRender={this.dateCellRender} monthCellRender={this.monthCellRender} />
         )
     }

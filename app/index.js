@@ -11,49 +11,48 @@ import 'mock-init';
 
 import './theme/css/style.css';
 // 引入React-Router模块
-import { Router, Route, Link, hashHistory, IndexRoute, Redirect, IndexLink} from 'react-router'
+import { Router, Route, Link, hashHistory, IndexRoute, Redirect, IndexLink} from 'react-router';
 
 // 引入Antd的导航组件
-import { Menu, Icon, Switch } from 'antd'
-const SubMenu = Menu.SubMenu
+import { Menu, Icon, Switch } from 'antd';
+const SubMenu = Menu.SubMenu;
 
 // 引入Ant-Design样式 & Animate.CSS样式
-import 'animate.css/animate.min.css'
-import 'font-awesome/css/font-awesome.min.css'
+import 'animate.css/animate.min.css';
+import 'font-awesome/css/font-awesome.min.css';
 // 引入单个页面（包括嵌套的子页面）
-import myTable from './views/table.js'
-import myForm from './views/form.js'
-import myChart from './views/chart.js'
-import myAnimate from './views/animate.js'
-import myCalendar from './views/calendar.js'
-import myCard from './views/fetch.js'
-
-const ACTIVE = { color: 'red' }
+import myTable from './views/table.js';
+import myForm from './views/form.js';
+import myChart from './views/chart.js';
+import myAnimate from './views/animate.js';
+import myCalendar from './views/calendar.js';
+import myCard from './views/fetch.js';
+const ACTIVE = { color: 'red' };
 
 // 配置导航
 class Sider extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             current: '',
             username: ''
-        }
+        };
     }
 
     handleClick = (e) => {
         this.setState({
             current: e.key
-        })
+        });
     }
 
     componentDidMount() {
-        this.getUser()
+        this.getUser();
     }
 
     getUser = () => {
         this.setState({
             username: 'luozh'
-        })
+        });
     }
 
     render() {
@@ -91,14 +90,14 @@ class Sider extends React.Component {
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 }
 // 配置路由
 render((
     <Router history={hashHistory} >
         <Route path="/" component={Sider}>
-            <IndexRoute path="myCard" component={myCard} />
+            <IndexRoute component={myCard} />
             <Route path="myTable" component={myTable} />
             <Route path="myForm" component={myForm} />
             <Route path="myChart" component={myChart} />
