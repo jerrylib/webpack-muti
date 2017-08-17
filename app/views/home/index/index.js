@@ -11,6 +11,11 @@ export default class Index extends React.Component {
             <div>
                 <h1>home/index</h1>
                 <Link to="/baike">baike</Link>
+                <BrowserRouter>
+                                <Switch>
+                                    <IndexRoute component={Index} />
+                                </Switch>
+                            </BrowserRouter>
             </div>
         );
     }

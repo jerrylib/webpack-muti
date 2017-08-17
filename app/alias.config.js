@@ -7,6 +7,7 @@
 
 var aliasConfig = {
     '~': '/components',
-    'mock-init':'/components/mock/mock-init.js'
+    'common-header':'/components/common-header/common-header.js',
+    'common-footer':'/components/common-footer/common-footer.js'
 };
 module.exports = aliasConfig;
