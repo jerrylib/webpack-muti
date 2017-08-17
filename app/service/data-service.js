@@ -14,6 +14,5 @@ function getValue(key) {
     return isString(key) && data[key];
 }
 module.exports =  {
-    addValue: addValue,
-    getValue: getValue
+    addValue,getValue
 };

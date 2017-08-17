@@ -42,7 +42,8 @@ var config = {
             compress: {
                 warnings: false
             },
-        })
+        }),
+        new webpack.optimize.OccurrenceOrderPlugin()
     ],
     module: {
         loaders: [{

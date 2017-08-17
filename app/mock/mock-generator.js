@@ -2,10 +2,10 @@ const matchUUID = '(((?=.*[0-9].*)(?=.*[A-Za-z].*)(?=.*-.*))[-0-9A-Za-z]+)'; //�
 const matchNum = '([0-9]+)'; //匹配数字
 const matchEnd = '($|\\?.*)';//匹配结束符
 module.exports = {
-    enable:true,
+    enable:false,
     mock:[{
         enable:true,
-        url:new RegExp(`/v0.${matchNum}/test`),
+        url:new RegExp('/v2/test'),
         method:'get',
         template:function(){
             return {

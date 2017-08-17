@@ -18,6 +18,7 @@ let configArray = [generator, libin];
 function loadMockConfig(mocks) {
     [].slice.call(mocks).forEach(function (mock) {
         if (mock.enable) {
+            debugger;
             Mock.mock(mock.url, mock.method, mock.template);
         }
     });
