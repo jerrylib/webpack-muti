@@ -1,4 +1,5 @@
 import {addValue,getValue} from './_data/_dataService';
+import {initTree} from './_tree/_treeService';
 
 export {
   /**
@@ -8,5 +9,9 @@ export {
   /**
    * 获取键值对的值
    */
-  getValue
+  getValue,
+  /**
+   * 扁平化数据构建树形结构
+   */
+  initTree
 };
