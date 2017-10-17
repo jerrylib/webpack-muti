@@ -1,24 +1,7 @@
 // Karma configuration
 // Generated on Sun May 07 2017 04:18:30 GMT+0800 (中国标准时间)
-const path = require('path');
-const aliasPath = require('./app/alias.config');
-const APP_PATH = path.join(__dirname, 'app');
-
-var configResolve;
-
-if (aliasPath) { //模块别名
-    for (var key in aliasPath) {
-        aliasPath[key] = path.join(APP_PATH, aliasPath[key]);
-    }
-    configResolve = {
-        modules: [APP_PATH, path.join(__dirname, 'node_modules')],
-        alias: aliasPath
-    };
-}
-
 module.exports = function (config) {
     config.set({
-
         // base path that will be used to resolve all patterns (eg. files, exclude)
         basePath: '',
         // frameworks to use
@@ -77,8 +60,7 @@ module.exports = function (config) {
                         plugins: ['istanbul']
                     }
                 }]
-            },
-            resolve: configResolve
+            }
         }
     });
 };

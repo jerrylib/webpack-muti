@@ -35,7 +35,6 @@
         //error
         "semi": ["error", "always"],
         "linebreak-style": ["error", "windows"],
-        "indent": [2, 4],
         "eqeqeq": 2, //必须使用全等
         "no-dynamic-import": ["off"]
     }
