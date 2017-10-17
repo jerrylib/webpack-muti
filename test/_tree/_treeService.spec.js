@@ -17,8 +17,7 @@ describe('This is treeService test', function () {
       parent_id: 1,
       name: 'name3'
     }];
-    var option = {ass:'dd'};
-    var tree = initTree(nodes,option);
+    var tree = initTree(nodes,{});
     //组件树形结构时不会影响原有数据
     expect(undefined).toEqual(nodes[0].children);
     expect(1).toEqual(tree.length);
