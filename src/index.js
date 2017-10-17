@@ -1,4 +1,4 @@
-import {addValue,getValue} from './service/dataService';
+import {addValue,getValue} from './_data/_dataService';
 
 export {
   /**
