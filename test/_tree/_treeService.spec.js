@@ -17,9 +17,11 @@ describe('This is treeService test', function () {
       parent_id: 1,
       name: 'name3'
     }];
-    var tree = initTree(nodes,{});
+    var option ={ ds:1};
+    var tree = initTree(nodes,option);
     //组件树形结构时不会影响原有数据
     expect(undefined).toEqual(nodes[0].children);
+    expect(undefined).toEqual(option.childrenKey);
     expect(1).toEqual(tree.length);
     expect(2).toEqual(tree[0].children.length);
   });
