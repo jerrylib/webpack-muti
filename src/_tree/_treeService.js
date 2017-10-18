@@ -18,7 +18,7 @@ function initTree(nodes, options) {
   options = _.defaults({},options,defaults);
   //拷贝数组对象
   var array = _.cloneDeep(nodes);
-  let treeItems = {},
+  var treeItems = {},
     parentKey = options.parentKey,
     childrenKey = options.childrenKey,
     itemIdentifier = options.itemIdentifier;
@@ -28,7 +28,7 @@ function initTree(nodes, options) {
   });
   //迭代map，为所有的条目添加儿子节点。
   _.forEach(treeItems, function (treeItem) {
-    let p = treeItems[treeItem[parentKey]];
+    var p = treeItems[treeItem[parentKey]];
     if (p) {
       if (!p[childrenKey]) {
         p[childrenKey] = [];
@@ -40,8 +40,8 @@ function initTree(nodes, options) {
 }
 /**
  * 查找获得根结点
- * @param {*} treeItems 
- * @param {*} options 
+ * @param {*} treeItems
+ * @param {*} options
  */
 function _findRoot(treeItems, options) {
   var parentKey = options.parentKey;
