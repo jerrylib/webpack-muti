@@ -1,6 +1,6 @@
 {
   "name": "rp-service",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "this is for ND resource platform developer",
   "main": "./index.js",
   "scripts": {
