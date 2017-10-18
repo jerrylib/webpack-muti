@@ -15,7 +15,7 @@ const defaults = {
  */
 function initTree(nodes, options) {
   //设置默认配置项
-  options = _.defaults({},options,defaults);
+  options = _.assign({}, options, defaults);
   //拷贝数组对象
   var array = _.cloneDeep(nodes);
   let treeItems = {},
