@@ -1,5 +1,7 @@
 // Karma configuration
 // Generated on Sun May 07 2017 04:18:30 GMT+0800 (中国标准时间)
+const path = require('path');
+
 module.exports = function (config) {
     config.set({
         // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -50,6 +52,11 @@ module.exports = function (config) {
             dir: 'coverage/'
         },
         webpack: {
+            resolve: {
+                alias: {
+                    src: path.join(__dirname, './src')
+                }
+            },
             module: {
                 loaders: [{
                     test: /\.js$/,
