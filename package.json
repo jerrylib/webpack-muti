@@ -20,6 +20,7 @@
     "bootstrap.native": "^2.0.10",
     "eslint": "^3.19.0",
     "eslint-plugin-react": "^7.0.0",
+    "faker": "^4.1.0",
     "jasmine-core": "^2.6.1",
     "karma-babel-preprocessor": "^6.0.1",
     "karma-coverage": "^1.1.1",
