@@ -1,3 +1,9 @@
+/*
+ * @Author: libin 
+ * @Date: 2017-10-25 10:24:17 
+ * @Last Modified by:   libin 
+ * @Last Modified time: 2017-10-25 10:24:17 
+ */
 import _ from 'lodash';
 
 const defaults = {
