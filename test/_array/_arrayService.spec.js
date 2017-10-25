@@ -2,12 +2,12 @@
  * @Author: libin 
  * @Date: 2017-10-25 15:40:04 
  * @Last Modified by: libin
- * @Last Modified time: 2017-10-25 19:09:18
+ * @Last Modified time: 2017-10-25 19:26:42
  */
 
 import {
   signArray
-} from './../../src/_array/_arrayService';
+} from 'src/_array/_arrayService';
 
 describe('This is arrayService test', function () {
   it('signArray fn test', function () {

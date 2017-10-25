@@ -2,11 +2,11 @@
  * @Author: libin 
  * @Date: 2017-10-25 10:27:31 
  * @Last Modified by: libin
- * @Last Modified time: 2017-10-25 13:36:20
+ * @Last Modified time: 2017-10-25 19:26:56
  */
 import {
   initTree
-} from './../../src/_tree/_treeService';
+} from 'src/_tree/_treeService';
 
 describe('This is treeService test', function () {
   it('initTree fn test', function () {
