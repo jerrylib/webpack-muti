@@ -14,7 +14,9 @@ import {
 import {
   signArray
 } from './_array/_arrayService';
-
+import {
+    getAuthHeader
+} from './_auth/_authService';
 export {
   /**
    * 添加键值对
@@ -31,5 +33,9 @@ export {
   /**
    * 基础列表、选中列表对比选中
    */
-  signArray
+  signArray,
+  /**
+   * 计算http请求auth头
+   */
+  getAuthHeader
 };
