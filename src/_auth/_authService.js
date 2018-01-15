@@ -7,16 +7,51 @@ import Base64 from 'crypto-js/enc-base64'
 import HmacSHA256 from 'crypto-js/hmac-sha256'
 
 function _randomCode() {
-    let code = ''
-    let codeLength = 8 // 验证码的长度
-    let chars = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd',
-        'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
-        'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'] // 所有候选组成验证码的字符，当然也可以用中文的
-    for (let i = 0; i < codeLength; i++) {
-        let charIndex = Math.floor(Math.random() * 36)
-        code += chars[charIndex]
-    }
-    return code
+  let code = ''
+  let codeLength = 8 // 验证码的长度
+  let chars = [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    'a',
+    'b',
+    'c',
+    'd',
+    'e',
+    'f',
+    'g',
+    'h',
+    'i',
+    'j',
+    'k',
+    'l',
+    'm',
+    'n',
+    'o',
+    'p',
+    'q',
+    'r',
+    's',
+    't',
+    'u',
+    'v',
+    'w',
+    'x',
+    'y',
+    'z'
+  ] // 所有候选组成验证码的字符，当然也可以用中文的
+  for (let i = 0; i < codeLength; i++) {
+    let charIndex = Math.floor(Math.random() * 36)
+    code += chars[charIndex]
+  }
+  return code
 }
 
 /**
@@ -29,27 +64,25 @@ function _randomCode() {
  * @returns {*}
  */
 function getAuthHeader(url, method, accessToken, mackey, adjustTime = 0) {
-    method = method.toUpperCase()
-    if (!accessToken || !mackey) {
-        return '';
-    }
+  method = method.toUpperCase()
+  if (!accessToken || !mackey) {
+    return '';
+  }
 
-    let strAuth = 'MAC id="' + accessToken + '",nonce="'
-    let nonce = (new Date().getTime() + adjustTime) + ':' + _randomCode()
+  let strAuth = 'MAC id="' + accessToken + '",nonce="'
+  let nonce = (new Date().getTime() + adjustTime) + ':' + _randomCode()
 
-    strAuth += nonce + '",mac="'
+  strAuth += nonce + '",mac="'
 
-    let b = url.indexOf('//') + 2
-    let e = url.indexOf('/', b)
-    let host = url.substring(b, e)
-    let path = url.substring(e)
-    let requestContent = nonce + '\n' + method + '\n' + path + '\n' + host + '\n'
-    let hash = HmacSHA256(requestContent, mackey)
-    let mac = hash.toString(Base64)
-    strAuth += mac + '"'
-    return strAuth;
+  let b = url.indexOf('//') + 2
+  let e = url.indexOf('/', b)
+  let host = url.substring(b, e)
+  let path = url.substring(e)
+  let requestContent = nonce + '\n' + method + '\n' + path + '\n' + host + '\n'
+  let hash = HmacSHA256(requestContent, mackey)
+  let mac = hash.toString(Base64)
+  strAuth += mac + '"'
+  return strAuth;
 }
 
-export {
-    getAuthHeader
-};
+export {getAuthHeader};

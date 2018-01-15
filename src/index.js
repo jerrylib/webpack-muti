@@ -1,22 +1,15 @@
 /*
- * @Author: libin 
- * @Date: 2017-10-25 10:26:14 
+ * @Author: libin
+ * @Date: 2017-10-25 10:26:14
  * @Last Modified by: libin
- * @Last Modified time: 2017-10-25 19:13:47
+ * @Last Modified time: 2018-01-15 14:52:31
  */
-import {
-  addValue,
-  getValue
-} from './_data/_dataService';
-import {
-  initTree
-} from './_tree/_treeService';
-import {
-  signArray
-} from './_array/_arrayService';
-import {
-    getAuthHeader
-} from './_auth/_authService';
+import {addValue, getValue} from './_data/_dataService';
+import {initTree} from './_tree/_treeService';
+import {signArray} from './_array/_arrayService';
+import {getAuthHeader} from './_auth/_authService';
+import {sum, pow} from './_demo/_demoService';
+
 export {
   /**
    * 添加键值对
@@ -37,5 +30,7 @@ export {
   /**
    * 计算http请求auth头
    */
-  getAuthHeader
+  getAuthHeader,
+  sum,
+  pow
 };
