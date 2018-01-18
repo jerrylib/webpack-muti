@@ -2,15 +2,15 @@
  * @Author: libin
  * @Date: 2017-10-25 10:26:14
  * @Last Modified by: libin
- * @Last Modified time: 2018-01-15 14:52:31
+ * @Last Modified time: 2018-01-18 20:20:02
  */
 import {addValue, getValue} from './_data/_dataService';
 import {initTree} from './_tree/_treeService';
 import {signArray} from './_array/_arrayService';
 import {getAuthHeader} from './_auth/_authService';
-import {sum, pow} from './_demo/_demoService';
+import {sum} from './_demo/_demoService';
 
-export {
+export default {
   /**
    * 添加键值对
    */
@@ -31,6 +31,5 @@ export {
    * 计算http请求auth头
    */
   getAuthHeader,
-  sum,
-  pow
+  sum
 };
