@@ -1,4 +1,6 @@
-/build/*
-/node_modules/*
-/coverage
-/*.log*
+build/*
+node_modules/*
+coverage/*
+*.log*
+stats.json
+package-lock.json
